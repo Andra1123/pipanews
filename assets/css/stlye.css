@@ -1,0 +1,84 @@
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(135, 14, 14);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(20, 44, 151);
+    border-radius: 10px;
+}
+
+
+.content-card {
+    height: 370px;
+}
+
+.content-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-brand img {
+    width: 70px;
+}
+
+.navbar-nav .nav-item a {
+    margin: 0 10px;
+    color: white !important;
+}
+
+.content-card img {
+    height: 260px;
+    object-fit: cover;
+}
+.hero {
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: black;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 100;
+}
+
+.hero img {
+    width: 100%
+}
+
+.card-title:hover {
+    color: blue;
+}
+
+.offcanvas {
+    color: aqua !important;
+}
+
+#list-game img {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+
+}

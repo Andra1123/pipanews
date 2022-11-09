@@ -23,6 +23,7 @@
 
 .sidebar ul > li{
     color: white;
+    cursor: pointer;
     padding: 10px 0 10px 10px;
     border: 1px solid red;
 }
