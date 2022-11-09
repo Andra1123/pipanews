@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 09:32 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.14
+-- Waktu pembuatan: 09 Nov 2022 pada 09.48
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,11 +24,11 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `article`
+-- Struktur dari tabel `article`
 --
 
 CREATE TABLE `article` (
-  `id_article` varchar(20) NOT NULL,
+  `id_article` int(11) NOT NULL,
   `title` varchar(45) NOT NULL,
   `description` varchar(6000) NOT NULL,
   `date_upload` char(8) NOT NULL
@@ -38,31 +37,31 @@ CREATE TABLE `article` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comnets`
+-- Struktur dari tabel `comments`
 --
 
-CREATE TABLE `comnets` (
-  `comentar` varchar(225) NOT NULL,
+CREATE TABLE `comments` (
+  `comment` varchar(225) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_article` varchar(20) NOT NULL
+  `id_article` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `response`
+-- Struktur dari tabel `response`
 --
 
 CREATE TABLE `response` (
   `like` varchar(5) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_article` varchar(20) NOT NULL
+  `id_article` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `role`
+-- Struktur dari tabel `role`
 --
 
 CREATE TABLE `role` (
@@ -73,7 +72,7 @@ CREATE TABLE `role` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -90,58 +89,68 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `article`
+-- Indeks untuk tabel `article`
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id_article`);
 
 --
--- Indexes for table `comnets`
+-- Indeks untuk tabel `comments`
 --
-ALTER TABLE `comnets`
+ALTER TABLE `comments`
   ADD KEY `id_user` (`id_user`),
   ADD KEY `id_article` (`id_article`);
 
 --
--- Indexes for table `response`
+-- Indeks untuk tabel `response`
 --
 ALTER TABLE `response`
   ADD KEY `id_user` (`id_user`),
   ADD KEY `id_article` (`id_article`);
 
 --
--- Indexes for table `role`
+-- Indeks untuk tabel `role`
 --
 ALTER TABLE `role`
   ADD PRIMARY KEY (`id_role`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id_user`),
   ADD KEY `id_role` (`id_role`);
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- Constraints for table `comnets`
+-- AUTO_INCREMENT untuk tabel `article`
 --
-ALTER TABLE `comnets`
-  ADD CONSTRAINT `comnets_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`),
-  ADD CONSTRAINT `comnets_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`);
+ALTER TABLE `article`
+  MODIFY `id_article` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for table `response`
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `comments`
+--
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `comments_to_article` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `response`
 --
 ALTER TABLE `response`
-  ADD CONSTRAINT `response_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`),
-  ADD CONSTRAINT `response_ibfk_2` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`);
+  ADD CONSTRAINT `response_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `response_to_article` FOREIGN KEY (`id_article`) REFERENCES `article` (`id_article`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `users`
+-- Ketidakleluasaan untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_role`) REFERENCES `role` (`id_role`);
