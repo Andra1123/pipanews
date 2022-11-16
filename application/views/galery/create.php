@@ -2,16 +2,18 @@
 <div class="d-flex">
     <?php $this->load->view('layouts/admin/sidebar') ?>
     <div class="mainbar">
-        <div class="text-center">
-            <h3>Tambah Galery</h3>
-        </div>
-        <form action="<?= base_url('admin/create_galery') ?>" method="POST" enctype="multipart/form-data" class="p-3  shadow">
+        <form action="<?= base_url('galery/create_galery') ?>" method="POST" enctype="multipart/form-data" class="p-3  shadow">
             <div class="foto" onclick="upload_foto()">
                 <img src="" id="prev-img">
             </div>
             <input type="file" class="d-none" name="image">
+            <div class="mt-3">
+                <label for="description" class="form-label">Deskripsi gallery</label>
+                <textarea name="description" id="description"></textarea>
+                <div class="small ms-1 mt-2 text-danger"><?php echo form_error('description'); ?></div>
+            </div>
             <div class="mt-3 text-center">
-                <button type="submit" class="btn btn-primary px-4">Kirim</button>
+                <button type="submit" class="btn btn-primary px-4">Upload</button>
             </div>
         </form>
         <footer class="p-3 border mt-4">
@@ -20,7 +22,15 @@
     </div>
 </div>
 
+
 <script>
+    tinymce.init({
+        selector: 'textarea', // change this value according to your HTML
+        plugins: 'a_tinymce_plugin',
+        a_plugin_option: true,
+        a_configuration_option: 400
+    });
+
     function upload_foto() {
         $('input[name="image"]').click();
     }
