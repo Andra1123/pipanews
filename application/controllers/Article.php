@@ -56,7 +56,7 @@ class Article extends CI_Controller
                     'image' => $image['file_name'],
                 ];
                 $this->article->simpan($article);
-                redirect('article');
+                redirect('umum/article');
             }
         }
     }
