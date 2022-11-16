@@ -19,6 +19,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="<?= base_url('umum/article') ?>">Artikel</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="<?= base_url('admin') ?>">Admin</a>
+                    </li>
                 </ul>
             </div>
         </div>

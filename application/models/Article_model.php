@@ -44,7 +44,7 @@ class Article_model extends CI_Model
     // menghapus data article
     public function delete($article)
     {
-        $this->db->delete('article', ['id_article' => $article['id_artikel']]);
+        $this->db->delete('article', ['id_article' => $article['id_article']]);
         unlink(FCPATH . 'assets/images/artikel/' . $article['file_name']);
     }
 }
