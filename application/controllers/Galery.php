@@ -20,7 +20,7 @@ class Galery extends CI_Controller
     {
         $data['galery'] = $this->galery->ambil_berdasarkan_parameter(['id_galery' => $id_galery]);
         $this->load->view('layouts/admin/head', $data);
-        $this->load->view('galery/show');
+        $this->load->view('lihat-galery');
         $this->load->view('layouts/admin/footer');
     }
 

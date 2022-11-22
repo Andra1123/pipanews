@@ -6,7 +6,7 @@
                 <div class="col">
                     <h1>Website Article</h1>
                     <h1>Gaya Hidup Sehat</h1>
-                    <p>a healthy lifestyle article made with some ways of good diet and good plate portions in eating. In this article we bring you news updates about healthy living,</p>
+                    <p>A healthy lifestyle article made with some ways of good diet and good plate portions in eating. In this article we bring you news updates about healthy living.</p>
                     <div class="action mt-5">
                         <a href="<?= base_url('umum/article') ?>" class="btn btn-primary  rounded-pill px-4 me-3">Baca
                             Artikel</a>

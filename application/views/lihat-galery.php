@@ -13,4 +13,5 @@
 <script>
     $('.navbar').removeClass('bg-transparant')
     $('.navbar').addClass('bg-dark')
+    $('.nav-item a').addClass('text-light')
 </script>

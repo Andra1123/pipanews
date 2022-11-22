@@ -22,7 +22,7 @@
             </div>
         </form>
         <footer class="p-3 border mt-4">
-            <p class="m-0">&copy; 2022 . dibuat oleh tim 4 .</p>
+            <p class="m-0">&copy; 2022 . dibuat oleh tim Andra Lutfiana, Reva Nugraha F, M.Raul Gibran, M.Agus Kurniawan, Zefanya Giorgio, Hendi Satrio.</p>
         </footer>
     </div>
 </div>

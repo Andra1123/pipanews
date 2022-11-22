@@ -1,18 +1,19 @@
 <?php $this->load->view('layouts/users/navbar') ?>
-<div class="container py-5">
-    <div class="konten mt-5">
-        <div class="detail mb-2">
-            <span>By : perhatikan isi piring anda * PIPA * tahun 2022</span>
-        </div>
-        <p>pipa diciptakan untuk membantu dan mengedukasi seseorang dalam hal ini khususnya adalah pembaca web kami untuk memulai memperhatikan isi piring mereka di dalamnya terdapat konten-konten yang berisi tentang artikel-artikel makan sehat panduan mengisi piring yang baik kami juga menyediakan intermezo-intermezo soal penunjang makan sehat, pipa ini sendiri adalah tugas kelompok web programming kami</p>
-        <p>tim kami beranggotakan lima orang yang di ketuai oleh vina fatmawati oktaviani , kemudian rizda amalia , putri nawang wulan, niken sri yuliana, dan andra lutfiana.</p>
-        <h1>TERIMA KASIH</h1>
-        <div class="footer">
-            <p>copyright . by: kelompok "PIPA" . tahun 2022</p>
+<div style=" background-image: url('<?= base_url('assets/images/logo/about-image.jpg') ?>');background-position: center;background-repeat: no-repeat;background-size: cover; height: 100vh;">
+    <div class="container py-5">
+        <div class="konten offset-md-3 col-md-8 mt-5">
+            <div class="detail mb-2">
+                <h1>PIPANEWS</h1>
+                <span>Apa itu PIPA? </span>
+            </div>
+            <p>Dengan tagline "Perhatikan Isi Piring Anda", PIPA hadir untuk membantu Anda memulai hidup sehat dengan memperhatikan gizi harian yang terdapat di isi piring anda.</p>
+            <p>Artikel-artikel kami akan selalu mendampingi dalam mengelola gizi harian yang dibutuhkan oleh tubuh anda, Beragam pilihan menu diet sehat namun enak yang dirancang khusus oleh kami.Pilihan makanan diet sehat bervariasi spesial dikreasikan oleh chef ahli berpengalaman. Jangan sembarangan diet instan, ikuti cara diet sehat ampuh ala PIPA. Semangat menjalani hidup sehat! </p>
+            <div class="footer">
+                <p>PIPA Website was developed by: Andra lutfiana, Hendi satrio, M.Raul gibran, M.Agus kurniawan, Reva Nugraha Fadhillah, Zefanya Giorgio. </p>
+            </div>
         </div>
     </div>
 </div>
-
 <script>
     $('.navbar').removeClass('bg-transparant')
     $('.navbar').addClass('bg-dark')

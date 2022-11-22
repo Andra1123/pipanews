@@ -117,7 +117,7 @@ class Article extends CI_Controller
     {
         $data['article'] = $this->article->ambil_berdasarkan_parameter(['id_article' => $id_artikel]);
         $this->load->view('layouts/admin/head', $data);
-        $this->load->view('article/show');
+        $this->load->view('lihat-article');
         $this->load->view('layouts/admin/footer');
     }
 
