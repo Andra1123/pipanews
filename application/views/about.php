@@ -1,7 +1,7 @@
 <?php $this->load->view('layouts/users/navbar') ?>
 <div style=" background-image: url('<?= base_url('assets/images/logo/about-image.jpg') ?>');background-position: center;background-repeat: no-repeat;background-size: cover; height: 100vh;">
     <div class="container py-5">
-        <div class="konten offset-md-3 col-md-8 mt-5">
+        <div class="konten offset-md-2 col-md-8 mt-5">
             <div class="detail mb-2">
                 <h1>PIPANEWS</h1>
                 <span>Apa itu PIPA? </span>
